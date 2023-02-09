@@ -12,7 +12,7 @@ exports.cadastrarEndereco = async (obj, schema) => {
 			INSERT INTO ${schema}.enderecos
 			(cep, 
 				logradouro, 
-				id_cidade, 
+				ibge, 
 				numero, 
 				complemento, 
 				bairro
@@ -20,7 +20,7 @@ exports.cadastrarEndereco = async (obj, schema) => {
 			VALUES
 			('${obj.cep}', 
 				'${obj.logradouro}', 
-				${obj.idCidade}, 
+				${obj.ibge}, 
 				'${obj.numero}', 
 				'${obj.complemento}', 
 				'${obj.bairro}' 
